@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Tech E Clan</title>
+    <!-- Icon Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="../static/home.css">
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/svg+xml">
+</head>
+<body>
+    
+    <section class="header">
+        <nav>
+            <a href="{{url_for('home')}}"><img src="image/logo.png" id="logo-img"></a>
+
+            <div class="nav-links" id="navLinks">
+
+                <span class="icon" onclick="hidemenu()">&#10005;</span>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('registration')}}">Registration</a></li>
+                    <li><a href="#course_call">Our Team</a></li>
+                    <li><a href="{{url_for('update')}}">Updates</a></li>
+                    <li><a href="{{url_for('contact')}}">Contact</a></li>
+                </ul>
+            </div> 
+            <span class="icon" onclick="showmenu()">&#9776;</span>
+        </nav>
+        <div class="text-box">
+            <h1>404 Error</h1>
+            <p>This page does not exist.</p>
+            
+            <a href="{{url_for('home')}}" class="hero-btn">Back To Home</a>
+        </div>
+    </section>
+    <!--Javascript is Start-->
+    <script src="../static/main.js"></script>
+</body>
+</html>

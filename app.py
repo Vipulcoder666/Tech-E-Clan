@@ -44,6 +44,8 @@ def contact():
 def update():
     return render_template('update.html')
 
-
+@app.errorhandler(404)
+def error(e):
+    return render_template('404.html')
 if __name__=="__main__":
     app.run(debug=True)
