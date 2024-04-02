@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Tech E Clan</title>
+    <!-- Icon Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="../static/home.css">
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/svg+xml">
+</head>
+<body>
+    
+    <section class="header">
+        <nav>
+            <a href="{{url_for('home')}}"><img src="image/logo.png" id="logo-img"></a>
+
+            <div class="nav-links" id="navLinks">
+
+                <span class="icon" onclick="hidemenu()">&#10005;</span>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('registration')}}">Registration</a></li>
+                    <li><a href="#course_call">Our Team</a></li>
+                    <li><a href="{{url_for('update')}}">Updates</a></li>
+                    <li><a href="{{url_for('contact')}}">Contact</a></li>
+                </ul>
+            </div> 
+            <span class="icon" onclick="showmenu()">&#9776;</span>
+        </nav>
+        <div class="text-box">
+            <h1>Tech-E-Clan</h1>
+            <p>Tech E Clan is a Technical Club.</p>
+            
+            <a href="{{url_for('registration')}}" class="hero-btn">Registration Open</a>
+        </div>
+    </section>
+
+    <!--Facilities-->
+    <section class="facilities">
+        <h1> Our facilities</h1>
+        <p>Facilities provide for Students by Tech E Clan</p>
+
+        <div class="row">
+            <div class="facilities-col">
+                <img src="../static/canteen.jfif" alt="">
+                <h3>Canteen</h3>
+                <p>The objective of the Canteen and meal service is to protect by reducing the risk of foodborne illness, with proper sanitary conditions.</p>
+            </div>
+
+            <div class="facilities-col">
+                <img src="../static/auditorium.jfif" alt="">
+                <h3>Auditorium</h3>
+                <p>The college is having a huge indoor auditorium with a professionally-deployed acoustic system and a seating capacity of about 200 people.</p>
+            </div>
+
+            <div class="facilities-col">
+                <img src="../static/hostel.jfif" alt="">
+                <h3>Hostel</h3>
+                <p>hostel consists of a separate mess, administrative office, warden quarter. In addition to well furnished rooms.</p>
+            </div>
+        </div>
+        </section>
+
+    
+
+    <!--Past Events-->
+
+    <section class="campus">
+        <h1>Past Events</h1>
+            <div class="row">
+                <div class="campus-col">
+                    <img src="../static/cm1.jfif" alt="">
+                    <div class="layer">
+                        <h3>Environment</h3>
+                    </div>
+                </div>
+
+                <div class="campus-col">
+                    <img src="../static/cm2.jfif" alt="">
+                    <div class="layer">
+                        <h3>Community</h3>
+                    </div>
+                </div>
+
+                <div class="campus-col">
+                    <img src="../static/cm3.jfif" alt="">
+                    <div class="layer">
+                        <h3>Education</h3>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!--Team Members-->
+
+    <section class="course" id="course_call">
+        <h1>Our Team Member</h1>
+        <p>This is our Team Members</p>
+
+        <div class="row">
+            <div class="course-col">
+                <img src="../static/nesar.png" alt="" srcset="">
+                <h3>Nesar Alam</h3>
+                <p>Technical Head <br>(Web Developer)</p><hr>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+                
+            </div>
+
+            <div class="course-col">
+                <img src="../static/nesar.png" alt="" srcset="">
+                <h3>Nesar Alam</h3>
+                <p>Technical Head <br>(Web Developer)</p><hr>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="course-col">
+                <img src="../static/nesar.png" alt="" srcset="">
+                <h3>Nesar Alam</h3>
+                <p>Technical Head <br>(Web Developer)</p><hr>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="course-col">
+                <img src="../static/nesar.png" alt="" srcset="">
+                <h3>Nesar Alam</h3>
+                <p>Technical Head <br>(Web Developer)</p><hr>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="course-col">
+                <img src="../static/nesar.png" alt="" srcset="">
+                <h3>Nesar Alam</h3>
+                <p>Technical Head <br>(Web Developer)</p><hr>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="course-col">
+                <img src="../static/nesar.png" alt="" srcset="">
+                <h3>Nesar Alam</h3>
+                <p>Technical Head <br>(Web Developer)</p><hr>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+            <!--Footer-->
+            <section class="footer">
+                <h4>About Us</h4>
+                <p>Tech E Clan is a Technical Club</p>
+                <p id="copyright">Made By &#10084; Nesar Alam</p>
+            </section>
+
+    <!--Javascript is Start-->
+    <script src="../static/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/svg+xml">
+    <link rel="stylesheet" href="../static/registration.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<!-- Icon Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+
+<section class="header">
+    <nav>
+        <a href="{{url_for('home')}}"><img src="image/logo.png" id="logo-img"></a>
+
+        <div class="nav-links" id="navLinks">
+        	<span class="icon" onclick="hidemenu()">&#10005;</span>  
+        	<ul>
+			<li><a href="{{url_for('home')}}">Home</a></li>
+			<li><a href="{{url_for('registration')}}">Registration</a></li>
+			<li><a href="{{url_for('home')}}">Our Team</a></li>
+			<li><a href="{{url_for('update')}}">Updates</a></li>
+			<li><a href="{{url_for('contact')}}">Contact</a></li>
+            </ul>
+        </div> 
+        <span class="icon" onclick="showmenu()">&#9776;</span>
+    </nav>
+
+	<div class="wrapper">
+		<div class="r_form_wrap">
+			{% with message = get_flashed_messages() %}
+        		{% if message %}
+            		{% for i in message %}
+                	<p>{{i}}</p>
+            		{% endfor %}
+        		{% endif %}
+    		{% endwith %}
+			<div class="title">
+				<p>Registration Form</p>
+			</div>
+			
+			<!-- Admission from -->
+			<div class="r_form">
+				<form action="/registration" method="post">
+					<div class="input_wrap">
+						<label for="yourname">Your Name</label>
+						<div class="input_item">
+							<i class="fa fa-user" id="icon"></i>
+							<input type="text" name="name" class="input" id="yourname" placeholder="Enter the name" required>
+						</div>
+					</div>
+					<div class="input_wrap">
+						<label for="emailaddress">Email Address</label>
+						<div class="input_item">
+							<i class="fa fa-envelope" id="icon"></i>
+							<input type="text" name="email" class="input" id="emailaddress" placeholder="Enter the Email ID" required>
+						</div>
+					</div>
+
+					<div class="input_wrap">
+						<label for="phone">Phone</label>
+						<div class="input_item">
+							<i class="fa fa-phone-square" id="icon"></i>
+							<input type="text" name="phone" class="input" id="phone" placeholder="Enter the Mobile number" required>
+						</div>
+					</div>
+					<div class="input_wrap">
+						<label>Gender</label>
+						<div class="input_radio">
+							<div class="input_radio_item">
+								<input type="radio" id="male" name="gender" class="radio" value="male" checked>
+								<label for="male" class="radio_mark">
+									<ion-icon class="i" name="male-sharp"></ion-icon>
+								Male</label>
+							</div>
+							<div class="input_radio_item">
+								<input type="radio" id="female" name="gender" class="radio" value="female">
+								<label for="female" class="radio_mark">
+									<ion-icon class="i" name="female-sharp"></ion-icon>
+									Female</label>
+							</div>
+							<div class="input_radio_item">
+								<input type="radio" id="others" name="gender" class="radio" value="others">
+								<label for="others" class="radio_mark">
+									<ion-icon class="i" name="male-female-sharp"></ion-icon>
+									Others</label>
+							</div>
+						</div>
+					</div>
+	
+					<div class="input_wrap">
+						<label for="dob">Date Of Birth</label>
+						<div class="input_item">
+							<i class="fa fa-calendar" id="icon"></i>
+							<input type="date" name="dob" class="input" id="dob" required>
+						</div>
+					</div>
+					<div class="input_wrap">
+						<label for="course">College</label>
+						<div class="input_item">
+							<i class="fa fa-caret-square-o-down" aria-hidden="true"id="icon" ></i>
+						<select id="college" name="college" class="input" required>
+							<option value="select"> Select the College</option>
+							<option value="mips">MIPS</option>
+							<option value="mpec">MPEC</option>
+							<option value="mpcps">MPCPS</option>
+						</select>
+					</div>
+					</div>
+					<div class="input_wrap">
+						<label for="course">Year</label>
+						<div class="input_item">
+							<i class="fa fa-caret-square-o-down" aria-hidden="true"id="icon" ></i>
+					<select id="year" name="year" class="input" required>
+					<option value="select"> Select the Year</option>
+					<option value="1st_year">1st Year</option>
+					<option value="2nd_year">2nd Year</option>
+					</select>
+					</div>
+					</div>
+					<div class="input_wrap">
+						<label for="course">Course</label>
+						<div class="input_item">
+							<i class="fa fa-caret-square-o-down" aria-hidden="true"id="icon" ></i>
+					<select id="course" name="course" class="input" required>
+					<option value="select"> Select the Course</option>
+					<option value="btech"> B.Tech</option>
+					<option value="bca">BCA</option>
+					<option value="mca">MCA</option>
+					</select>
+					</div>
+					</div>
+
+					<div class="input_wrap">
+						<label for="password">Aadhar No.</label>
+						<div class="input_item">
+							<i class="fa fa-fingerprint" id="icon"></i>
+							<input type="text" name="aadhar" class="input" placeholder="Enter Aadhar No." required>
+						</div>
+					</div>
+					
+					<input type="submit" class="button" value="Register Now">
+					
+					<div ></div>
+					<input type="reset" class="clear_ad" value="Clear">
+					
+				</form>
+			</div>
+	
+		</div>
+	</div>
+	</section>
+	<div class="none_div">
+
+	</div>
+	</body>
+	<!-- Javascript for this Web page -->
+	
+	<script>
+	var navLinks= document.getElementById("navLinks");
+
+	function showmenu(){
+		navLinks.style.right="0";
+	}   
+	function hidemenu(){
+		navLinks.style.right="-200px";
+	}
+</script>
+</html>
