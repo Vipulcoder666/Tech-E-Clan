@@ -245,7 +245,11 @@
  cursor: pointer;
  transition: 0.5s ease;
  }
- 
+ #logo-img{
+   height: 40px;
+   width: 40px;
+   border-radius: 50%;
+}
  .button:hover{
  border-color: var(--btn-hvr);
  }
@@ -321,4 +325,4 @@
         margin-top: 15px;
     }
     
- 
+   }

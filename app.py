@@ -47,5 +47,9 @@ def update():
 @app.errorhandler(404)
 def error(e):
     return render_template('404.html')
+
+@app.route('/payment')
+def payment():
+    return render_template('payment.html')
 if __name__=="__main__":
     app.run(debug=True)

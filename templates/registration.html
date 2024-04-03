@@ -16,13 +16,14 @@
 
 <section class="header">
     <nav>
-        <a href="{{url_for('home')}}"><img src="image/logo.png" id="logo-img"></a>
+        <a href="{{url_for('home')}}"><img src="../static/logo.png" id="logo-img"></a>
 
         <div class="nav-links" id="navLinks">
         	<span class="icon" onclick="hidemenu()">&#10005;</span>  
         	<ul>
 			<li><a href="{{url_for('home')}}">Home</a></li>
 			<li><a href="{{url_for('registration')}}">Registration</a></li>
+			<li><a href="{{url_for('payment')}}">Payment</a></li>
 			<li><a href="{{url_for('home')}}">Our Team</a></li>
 			<li><a href="{{url_for('update')}}">Updates</a></li>
 			<li><a href="{{url_for('contact')}}">Contact</a></li>

@@ -302,7 +302,11 @@ background: var(--btn-hvr);
   border-color: var(--bordcolor);
   }
   
-
+  #logo-img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
 
   .clear_ad{
     margin-top: 10px;
@@ -366,4 +370,4 @@ background: var(--btn-hvr);
   .input_item{
     overflow: hidden;
   }
-  
+}

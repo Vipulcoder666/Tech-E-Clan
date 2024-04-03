@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Updates</title>
+  <title>Payment</title>
   <link rel="shortcut icon" href="image/favicon.ico" type="image/svg+xml">
   <link rel="stylesheet" href="../static/update.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -14,7 +14,7 @@
 <body>
   <section class="header">
     <nav>
-        <a href="{{url_for('home')}}"><img src="../static/logo.png" id="logo-img"></a>
+        <a href="{{url_for('home')}}"><img src="image/logo.png" id="logo-img"></a>
 
         <div class="nav-links" id="navLinks">
 
@@ -36,14 +36,26 @@
       <div class="r_form_wrap">
         
         <div class="title">
-          <p id="header_fees">New Updates</p>
+          <p id="header_fees">Make Payment</p>
         </div>
         
         <!-- Admission from -->
 
         <div class="r_form">
-          <p>No Updates</p>
-</div>
+          <div class="course-col">
+            <img src="../static/qr.jpeg" alt="QR Code" srcset="" height='200px' width='200px'>
+            <h3>UPI ID: nesar.786@ybl</h3>
+            <h3>Name : Nesar Alam</h3><br>
+            <p>After completed the payment click 
+                on the below button to fill the payment details for final registration.
+            </p><br>
+            <a href="{{url_for('registration')}}" class="hero-btn">Fill Details</a>
+            
+
+        </div>
+        
+        </div>
+        
 </div>
     </div>
   </form>
